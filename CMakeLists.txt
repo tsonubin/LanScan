@@ -292,7 +292,7 @@ set(HEADERS
 
 # UI files (Phase 5-7-8)
 set(UI_SOURCES
-    ui/mainwindow.ui
+    ui/MainWindow.ui
     ui/scanconfigdialog.ui
     ui/devicetablewidget.ui
     ui/metricswidget.ui

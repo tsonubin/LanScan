@@ -1,5 +1,5 @@
 #include "views/MainWindow.h"
-#include "ui_mainwindow.h"
+#include "ui_MainWindow.h"
 #include "views/DeviceTableWidget.h"
 #include "views/ScanConfigDialog.h"
 #include "views/MetricsWidget.h"

@@ -456,6 +456,7 @@ add_test(NAME ScanControllerTest COMMAND ScanControllerTest)
 add_executable(MetricsControllerTest
     MetricsControllerTest.cpp
     ${CMAKE_SOURCE_DIR}/src/controllers/MetricsController.cpp
+    ${CMAKE_SOURCE_DIR}/include/controllers/MetricsController.h
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/MetricsAggregator.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/PingService.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/LatencyCalculator.cpp
@@ -463,6 +464,7 @@ add_executable(MetricsControllerTest
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/PacketLossCalculator.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/QualityScoreCalculator.cpp
     ${CMAKE_SOURCE_DIR}/src/database/DeviceRepository.cpp
+    ${CMAKE_SOURCE_DIR}/src/database/DeviceCache.cpp
     ${CMAKE_SOURCE_DIR}/src/database/DatabaseManager.cpp
     ${CMAKE_SOURCE_DIR}/src/models/Device.cpp
     ${CMAKE_SOURCE_DIR}/src/models/PortInfo.cpp
@@ -510,7 +512,9 @@ add_test(NAME ExportControllerTest COMMAND ExportControllerTest)
 add_executable(DeviceTableViewModelTest
     DeviceTableViewModelTest.cpp
     ${CMAKE_SOURCE_DIR}/src/viewmodels/DeviceTableViewModel.cpp
+    ${CMAKE_SOURCE_DIR}/include/viewmodels/DeviceTableViewModel.h
     ${CMAKE_SOURCE_DIR}/src/database/DeviceRepository.cpp
+    ${CMAKE_SOURCE_DIR}/src/database/DeviceCache.cpp
     ${CMAKE_SOURCE_DIR}/src/database/DatabaseManager.cpp
     ${CMAKE_SOURCE_DIR}/src/models/Device.cpp
     ${CMAKE_SOURCE_DIR}/src/models/PortInfo.cpp
@@ -530,13 +534,18 @@ add_test(NAME DeviceTableViewModelTest COMMAND DeviceTableViewModelTest)
 add_executable(MetricsViewModelTest
     MetricsViewModelTest.cpp
     ${CMAKE_SOURCE_DIR}/src/viewmodels/MetricsViewModel.cpp
+    ${CMAKE_SOURCE_DIR}/include/viewmodels/MetricsViewModel.h
     ${CMAKE_SOURCE_DIR}/src/controllers/MetricsController.cpp
+    ${CMAKE_SOURCE_DIR}/include/controllers/MetricsController.h
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/MetricsAggregator.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/PingService.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/LatencyCalculator.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/JitterCalculator.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/PacketLossCalculator.cpp
     ${CMAKE_SOURCE_DIR}/src/network/diagnostics/QualityScoreCalculator.cpp
+    ${CMAKE_SOURCE_DIR}/src/database/DeviceRepository.cpp
+    ${CMAKE_SOURCE_DIR}/src/database/DeviceCache.cpp
+    ${CMAKE_SOURCE_DIR}/src/database/DatabaseManager.cpp
     ${CMAKE_SOURCE_DIR}/src/models/Device.cpp
     ${CMAKE_SOURCE_DIR}/src/models/PortInfo.cpp
     ${CMAKE_SOURCE_DIR}/src/models/NetworkMetrics.cpp
